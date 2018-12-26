@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */; };
+		3F512B3F21D368C800C14E8F /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3E21D368C800C14E8F /* F.swift */; };
 		3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3152521D2736B00143981 /* AppDelegate.swift */; };
 		3FD3152D21D2736C00143981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152C21D2736C00143981 /* Assets.xcassets */; };
 		3FD3153021D2736C00143981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152E21D2736C00143981 /* LaunchScreen.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3F512B3E21D368C800C14E8F /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		3FD3152221D2736B00143981 /* Square.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3152521D2736B00143981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD3152C21D2736C00143981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F512B3D21D368BC00C14E8F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				3F512B3E21D368C800C14E8F /* F.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		3FD3151921D2736B00143981 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		3FD3152421D2736B00143981 /* Square */ = {
 			isa = PBXGroup;
 			children = (
+				3F512B3D21D368BC00C14E8F /* Types */,
 				3FD3153D21D2751A00143981 /* Extensions */,
 				3FD3152521D2736B00143981 /* AppDelegate.swift */,
 				3FD3152C21D2736C00143981 /* Assets.xcassets */,
@@ -74,6 +87,7 @@
 		3FD3153D21D2751A00143981 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F512B3F21D368C800C14E8F /* F.swift in Sources */,
 				3FD3153C21D273E300143981 /* SquareView.swift in Sources */,
 				3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */,
+				3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */,
 				3FD3154121D2782000143981 /* Position.swift in Sources */,
 				3FD3153921D273C700143981 /* SquareViewController.swift in Sources */,
 			);
