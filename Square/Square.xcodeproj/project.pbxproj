@@ -53,10 +53,36 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		3F513CF221D3BDDD00C14E8F /* SquareViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FD3153721D273C700143981 /* SquareViewController.swift */,
+				3FD3153821D273C700143981 /* SquareViewController.xib */,
+				3FD3153B21D273E300143981 /* SquareView.swift */,
+			);
+			path = SquareViewController;
+			sourceTree = "<group>";
+		};
+		3F513CF321D3BE2B00C14E8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FD3154021D2782000143981 /* Position.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F513CF421D3BE4A00C14E8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3F513CF221D3BDDD00C14E8F /* SquareViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		3FD3151921D2736B00143981 = {
 			isa = PBXGroup;
 			children = (
-				3FD3152421D2736B00143981 /* Square */,
+				3FD3152421D2736B00143981 /* Source */,
 				3FD3152321D2736B00143981 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,21 +95,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3FD3152421D2736B00143981 /* Square */ = {
+		3FD3152421D2736B00143981 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3F513CF321D3BE2B00C14E8F /* Models */,
+				3F513CF421D3BE4A00C14E8F /* UI */,
 				3F512B3D21D368BC00C14E8F /* Types */,
 				3FD3153D21D2751A00143981 /* Extensions */,
 				3FD3152521D2736B00143981 /* AppDelegate.swift */,
 				3FD3152C21D2736C00143981 /* Assets.xcassets */,
-				3FD3152E21D2736C00143981 /* LaunchScreen.storyboard */,
 				3FD3153121D2736C00143981 /* Info.plist */,
-				3FD3153721D273C700143981 /* SquareViewController.swift */,
-				3FD3153821D273C700143981 /* SquareViewController.xib */,
-				3FD3153B21D273E300143981 /* SquareView.swift */,
-				3FD3154021D2782000143981 /* Position.swift */,
+				3FD3152E21D2736C00143981 /* LaunchScreen.storyboard */,
 			);
-			path = Square;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		3FD3153D21D2751A00143981 /* Extensions */ = {

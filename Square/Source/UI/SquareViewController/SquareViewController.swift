@@ -11,7 +11,6 @@ import UIKit
 class SquareViewController: UIViewController {
 
     var squareView: SquareView? {
-
         if self.isViewLoaded {
             return self.view as? SquareView
         }
