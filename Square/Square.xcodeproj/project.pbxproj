@@ -13,6 +13,7 @@
 		3FD3153921D273C700143981 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3153721D273C700143981 /* SquareViewController.swift */; };
 		3FD3153A21D273C700143981 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3153821D273C700143981 /* SquareViewController.xib */; };
 		3FD3153C21D273E300143981 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3153B21D273E300143981 /* SquareView.swift */; };
+		3FD3154121D2782000143981 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3154021D2782000143981 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3FD3153721D273C700143981 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3FD3153821D273C700143981 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3FD3153B21D273E300143981 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		3FD3154021D2782000143981 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3FD3153721D273C700143981 /* SquareViewController.swift */,
 				3FD3153821D273C700143981 /* SquareViewController.xib */,
 				3FD3153B21D273E300143981 /* SquareView.swift */,
+				3FD3154021D2782000143981 /* Position.swift */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				3FD3153C21D273E300143981 /* SquareView.swift in Sources */,
 				3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */,
+				3FD3154121D2782000143981 /* Position.swift in Sources */,
 				3FD3153921D273C700143981 /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
