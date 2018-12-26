@@ -10,9 +10,9 @@ import UIKit
 
 class SquareView: UIView {
 
-    @IBOutlet var label: UILabel?
+    @IBOutlet var label: UILabel!
     
-    @IBOutlet var button: UIButton?
+    @IBOutlet var button: UIButton!
     
     var isAnimated: Bool {
         return self.token?.isRunning ?? false
@@ -21,7 +21,7 @@ class SquareView: UIView {
     var isStoped = true {
         didSet {
             let newTitle = oldValue ? "Stop" : "Start"
-            self.button?.setTitle(newTitle, for: .normal)
+            self.button.setTitle(newTitle, for: .normal)
         }
     }
     
@@ -48,7 +48,7 @@ class SquareView: UIView {
         let nextPosition = self.squarePosition.nextPosition
         
         self.token = UIView.animationToken(withDuration: 1.0, animations: {
-            self.label?.frame.origin = nextPosition.point
+            self.label.frame.origin = nextPosition.point
         },
         completion: {
             self.squarePosition = nextPosition

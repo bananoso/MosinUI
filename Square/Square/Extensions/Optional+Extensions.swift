@@ -14,9 +14,12 @@ extension Optional {
         self.map(execute)
     }
     
-    func or(_ execute: () -> ()) {
+    @discardableResult
+    func ifNil(_ execute: () -> ()) -> Optional {
         if self == nil {
             execute()
         }
+        
+        return self
     }
 }

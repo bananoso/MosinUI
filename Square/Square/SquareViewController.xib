@@ -31,6 +31,9 @@
                     <rect key="frame" x="170" y="318" width="34" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Start"/>
+                    <connections>
+                        <action selector="onStartButton:" destination="-1" eventType="touchUpInside" id="S5j-W1-yir"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
