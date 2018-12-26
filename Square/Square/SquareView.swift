@@ -18,7 +18,7 @@ class SquareView: UIView {
         return self.token?.isRunning ?? false
     }
     
-    var isStoped = true {
+    var isStopped = true {
         didSet {
             let newTitle = oldValue ? "Stop" : "Start"
             self.button.setTitle(newTitle, for: .normal)
@@ -30,7 +30,7 @@ class SquareView: UIView {
     
     func autoMoveSquare() {
         self.setSquarePosition(self.squarePosition.nextPosition) { _ in
-            if !self.isStoped {
+            if !self.isStopped {
                 self.autoMoveSquare()
             }
         }
@@ -38,22 +38,16 @@ class SquareView: UIView {
     
     func setSquarePosition(
         _ position: Position,
-        animated: Bool = false,
+        animated: Bool = true,
         completionHandler: F.Completion<Bool>? = nil
     ) {
-        guard !self.isAnimated else { return }
+        let animation = { self.label.frame.origin = self.point(by: position) }
+        let duration = animated ? 1.0 : 0
         
-        defer { self.squarePosition = position }
-        
-        let nextPosition = self.squarePosition.nextPosition
-        
-        self.token = UIView.animationToken(withDuration: 1.0, animations: {
-            self.label.frame.origin = self.point(by: nextPosition)
-        },
-        completion: {
-            self.squarePosition = nextPosition
+        self.token = UIView.animationToken(withDuration: duration, animations: animation) {
+            self.squarePosition = position
             completionHandler?($0)
-        })
+        }
     }
     
     private func point(by position: Position) -> CGPoint {

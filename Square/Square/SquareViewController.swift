@@ -11,21 +11,21 @@ import UIKit
 class SquareViewController: UIViewController {
 
     var squareView: SquareView? {
+
         if self.isViewLoaded {
             return self.view as? SquareView
         }
-        
+
         return nil
     }
     
     @IBAction func onStartButton(_ sender: UIButton) {
-        (self.squareView?.isStoped).do {
-            if $0 {
-                self.squareView?.isStoped = false
-                self.squareView?.autoMoveSquare()
-            } else {
-                self.squareView?.isStoped = true
+        self.squareView.do {
+            if $0.isStopped && !$0.isAnimated {
+                $0.autoMoveSquare()
             }
+            
+            $0.isStopped.toggle()
         }
     }
     
