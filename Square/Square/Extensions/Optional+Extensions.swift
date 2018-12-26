@@ -1,8 +1,8 @@
 //
 //  Optional+Extension.swift
-//  carWash
+//  Square
 //
-//  Created by Student on 25.10.2018.
+//  Created by Mosin Dmitry on 25.10.2018.
 //  Copyright © 2018 IDAP. All rights reserved.
 //
 

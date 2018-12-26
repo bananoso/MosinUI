@@ -22,7 +22,7 @@ class SquareViewController: UIViewController {
         (self.squareView?.isStoped).do {
             if $0 {
                 self.squareView?.isStoped = false
-                self.squareView?.autoMovingSquare()
+                self.squareView?.autoMoveSquare()
             } else {
                 self.squareView?.isStoped = true
             }
