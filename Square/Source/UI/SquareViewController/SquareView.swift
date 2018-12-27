@@ -25,8 +25,9 @@ class SquareView: UIView {
         }
     }
     
+    var squarePosition: Position!
+    
     private var token: Token?
-    private var squarePosition = Position.leftTop
     
     private let screanBounds = UIScreen.main.bounds
     private let offsetX: CGFloat = 20

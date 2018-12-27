@@ -30,5 +30,7 @@ class SquareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.squareView?.squarePosition = Position.leftTop
     }
 }
