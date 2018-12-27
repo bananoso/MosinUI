@@ -22,13 +22,4 @@ enum Position {
         case .leftBottom: return .leftTop
         }
     }
-    
-    var point: CGPoint {
-        switch self {
-        case .leftTop: return .init(x: 20, y: 44)
-        case .rightTop: return .init(x: 300, y: 44)
-        case .rightBottom: return .init(x: 300, y: 750)
-        case .leftBottom: return .init(x: 20, y: 750)
-        }
-    }
 }
