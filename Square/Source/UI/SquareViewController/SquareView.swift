@@ -41,21 +41,12 @@ class SquareView: UIView {
         animated: Bool = true,
         completionHandler: F.Completion<Bool>? = nil
     ) {
-        let animation = { self.label.frame.origin = self.point(by: position) }
-        let duration = animated ? 1.0 : 0
+        let animation = { self.label.frame.origin = position.point }
         
-        self.token = UIView.animationToken(withDuration: duration, animations: animation) {
+        UIView.setAnimationsEnabled(animated)
+        self.token = UIView.animationToken(withDuration: 1.0, animations: animation) {
             self.squarePosition = position
             completionHandler?($0)
-        }
-    }
-    
-    private func point(by position: Position) -> CGPoint {
-        switch position {
-        case .leftTop: return .init(x: 20, y: 44)
-        case .rightTop: return .init(x: 300, y: 44)
-        case .rightBottom: return .init(x: 300, y: 750)
-        case .leftBottom: return .init(x: 20, y: 750)
         }
     }
 }
