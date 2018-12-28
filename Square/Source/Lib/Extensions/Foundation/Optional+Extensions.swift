@@ -2,7 +2,7 @@
 //  Optional+Extension.swift
 //  Square
 //
-//  Created by Mosin Dmitry on 25.10.2018.
+//  Created by Student on 25.10.2018.
 //  Copyright © 2018 IDAP. All rights reserved.
 //
 
@@ -21,5 +21,9 @@ extension Optional {
         }
         
         return self
+    }
+    
+    func apply<Result>(_ transform: ((Wrapped) -> Result)?) -> Result? {
+        return self.flatMap { transform?($0) }
     }
 }

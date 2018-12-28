@@ -10,6 +10,23 @@
 		3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */; };
 		3F512B3F21D368C800C14E8F /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3E21D368C800C14E8F /* F.swift */; };
 		3F513CED21D374F300C14E8F /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */; };
+		3F5D4FC721D60946003C4326 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FBC21D60945003C4326 /* Weak.swift */; };
+		3F5D4FC821D60946003C4326 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FBD21D60946003C4326 /* Queue.swift */; };
+		3F5D4FC921D60946003C4326 /* ObservableObject.Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FBF21D60946003C4326 /* ObservableObject.Observers.swift */; };
+		3F5D4FCA21D60946003C4326 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC021D60946003C4326 /* ObservableObject.swift */; };
+		3F5D4FCB21D60946003C4326 /* ObservableObject.Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC121D60946003C4326 /* ObservableObject.Observer.swift */; };
+		3F5D4FCC21D60946003C4326 /* CancellableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC321D60946003C4326 /* CancellableProperty.swift */; };
+		3F5D4FCD21D60946003C4326 /* CompositCancellableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC421D60946003C4326 /* CompositCancellableProperty.swift */; };
+		3F5D4FCE21D60946003C4326 /* AbstractCancellableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC521D60946003C4326 /* AbstractCancellableProperty.swift */; };
+		3F5D4FCF21D60946003C4326 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FC621D60946003C4326 /* Atomic.swift */; };
+		3F5D4FD821D60A54003C4326 /* Timer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD221D60A54003C4326 /* Timer+Extensions.swift */; };
+		3F5D4FD921D60A54003C4326 /* Strideable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD321D60A54003C4326 /* Strideable+Extensions.swift */; };
+		3F5D4FDA21D60A54003C4326 /* DispatchTime+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD421D60A54003C4326 /* DispatchTime+Extensions.swift */; };
+		3F5D4FDB21D60A54003C4326 /* NSLocking+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD521D60A54003C4326 /* NSLocking+Extensions.swift */; };
+		3F5D4FDC21D60A54003C4326 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD621D60A54003C4326 /* DispatchQueue+Extensions.swift */; };
+		3F5D4FDD21D60A54003C4326 /* RangeReplaceableCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FD721D60A54003C4326 /* RangeReplaceableCollection+Extension.swift */; };
+		3F5D4FE121D60BF2003C4326 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FDF21D60BF2003C4326 /* Weakifiable.swift */; };
+		3F5D4FE221D60BF2003C4326 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FE021D60BF2003C4326 /* Cancellable.swift */; };
 		3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3152521D2736B00143981 /* AppDelegate.swift */; };
 		3FD3152D21D2736C00143981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152C21D2736C00143981 /* Assets.xcassets */; };
 		3FD3153021D2736C00143981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152E21D2736C00143981 /* LaunchScreen.storyboard */; };
@@ -23,6 +40,23 @@
 		3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		3F512B3E21D368C800C14E8F /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FBC21D60945003C4326 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		3F5D4FBD21D60946003C4326 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		3F5D4FBF21D60946003C4326 /* ObservableObject.Observers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableObject.Observers.swift; sourceTree = "<group>"; };
+		3F5D4FC021D60946003C4326 /* ObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		3F5D4FC121D60946003C4326 /* ObservableObject.Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableObject.Observer.swift; sourceTree = "<group>"; };
+		3F5D4FC321D60946003C4326 /* CancellableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancellableProperty.swift; sourceTree = "<group>"; };
+		3F5D4FC421D60946003C4326 /* CompositCancellableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositCancellableProperty.swift; sourceTree = "<group>"; };
+		3F5D4FC521D60946003C4326 /* AbstractCancellableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCancellableProperty.swift; sourceTree = "<group>"; };
+		3F5D4FC621D60946003C4326 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		3F5D4FD221D60A54003C4326 /* Timer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FD321D60A54003C4326 /* Strideable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strideable+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FD421D60A54003C4326 /* DispatchTime+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FD521D60A54003C4326 /* NSLocking+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocking+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FD621D60A54003C4326 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
+		3F5D4FD721D60A54003C4326 /* RangeReplaceableCollection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+Extension.swift"; sourceTree = "<group>"; };
+		3F5D4FDF21D60BF2003C4326 /* Weakifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
+		3F5D4FE021D60BF2003C4326 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		3FD3152221D2736B00143981 /* Square.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3152521D2736B00143981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD3152C21D2736C00143981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				3F512B3E21D368C800C14E8F /* F.swift */,
+				3F5D4FC621D60946003C4326 /* Atomic.swift */,
+				3F5D4FBD21D60946003C4326 /* Queue.swift */,
+				3F5D4FBC21D60945003C4326 /* Weak.swift */,
+				3F5D4FC221D60946003C4326 /* CancellableProperty */,
+				3F5D4FBE21D60946003C4326 /* ObservableObject */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -79,6 +118,67 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		3F5D4FBB21D60733003C4326 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FDE21D60B78003C4326 /* Protocols */,
+				3F512B3D21D368BC00C14E8F /* Types */,
+				3FD3153D21D2751A00143981 /* Extensions */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3F5D4FBE21D60946003C4326 /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FBF21D60946003C4326 /* ObservableObject.Observers.swift */,
+				3F5D4FC021D60946003C4326 /* ObservableObject.swift */,
+				3F5D4FC121D60946003C4326 /* ObservableObject.Observer.swift */,
+			);
+			path = ObservableObject;
+			sourceTree = "<group>";
+		};
+		3F5D4FC221D60946003C4326 /* CancellableProperty */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FC321D60946003C4326 /* CancellableProperty.swift */,
+				3F5D4FC421D60946003C4326 /* CompositCancellableProperty.swift */,
+				3F5D4FC521D60946003C4326 /* AbstractCancellableProperty.swift */,
+			);
+			path = CancellableProperty;
+			sourceTree = "<group>";
+		};
+		3F5D4FD021D609A6003C4326 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FD621D60A54003C4326 /* DispatchQueue+Extensions.swift */,
+				3F5D4FD421D60A54003C4326 /* DispatchTime+Extensions.swift */,
+				3F5D4FD521D60A54003C4326 /* NSLocking+Extensions.swift */,
+				3F5D4FD721D60A54003C4326 /* RangeReplaceableCollection+Extension.swift */,
+				3F5D4FD321D60A54003C4326 /* Strideable+Extensions.swift */,
+				3F5D4FD221D60A54003C4326 /* Timer+Extensions.swift */,
+				3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		3F5D4FD121D609BC003C4326 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		3F5D4FDE21D60B78003C4326 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FE021D60BF2003C4326 /* Cancellable.swift */,
+				3F5D4FDF21D60BF2003C4326 /* Weakifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		3FD3151921D2736B00143981 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +200,7 @@
 			children = (
 				3F513CF321D3BE2B00C14E8F /* Models */,
 				3F513CF421D3BE4A00C14E8F /* UI */,
-				3F512B3D21D368BC00C14E8F /* Types */,
-				3FD3153D21D2751A00143981 /* Extensions */,
+				3F5D4FBB21D60733003C4326 /* Lib */,
 				3FD3152521D2736B00143981 /* AppDelegate.swift */,
 				3FD3152C21D2736C00143981 /* Assets.xcassets */,
 				3FD3153121D2736C00143981 /* Info.plist */,
@@ -113,8 +212,8 @@
 		3FD3153D21D2751A00143981 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */,
-				3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */,
+				3F5D4FD021D609A6003C4326 /* Foundation */,
+				3F5D4FD121D609BC003C4326 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,8 +293,25 @@
 				3FD3153C21D273E300143981 /* SquareView.swift in Sources */,
 				3F513CED21D374F300C14E8F /* Optional+Extensions.swift in Sources */,
 				3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */,
+				3F5D4FDB21D60A54003C4326 /* NSLocking+Extensions.swift in Sources */,
+				3F5D4FCF21D60946003C4326 /* Atomic.swift in Sources */,
+				3F5D4FCB21D60946003C4326 /* ObservableObject.Observer.swift in Sources */,
+				3F5D4FCA21D60946003C4326 /* ObservableObject.swift in Sources */,
+				3F5D4FCE21D60946003C4326 /* AbstractCancellableProperty.swift in Sources */,
+				3F5D4FDC21D60A54003C4326 /* DispatchQueue+Extensions.swift in Sources */,
+				3F5D4FC921D60946003C4326 /* ObservableObject.Observers.swift in Sources */,
+				3F5D4FE121D60BF2003C4326 /* Weakifiable.swift in Sources */,
+				3F5D4FDA21D60A54003C4326 /* DispatchTime+Extensions.swift in Sources */,
 				3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */,
+				3F5D4FCC21D60946003C4326 /* CancellableProperty.swift in Sources */,
+				3F5D4FCD21D60946003C4326 /* CompositCancellableProperty.swift in Sources */,
+				3F5D4FC721D60946003C4326 /* Weak.swift in Sources */,
+				3F5D4FDD21D60A54003C4326 /* RangeReplaceableCollection+Extension.swift in Sources */,
+				3F5D4FE221D60BF2003C4326 /* Cancellable.swift in Sources */,
+				3F5D4FD821D60A54003C4326 /* Timer+Extensions.swift in Sources */,
 				3FD3154121D2782000143981 /* Position.swift in Sources */,
+				3F5D4FC821D60946003C4326 /* Queue.swift in Sources */,
+				3F5D4FD921D60A54003C4326 /* Strideable+Extensions.swift in Sources */,
 				3FD3153921D273C700143981 /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
