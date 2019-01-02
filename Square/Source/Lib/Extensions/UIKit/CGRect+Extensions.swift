@@ -45,4 +45,11 @@ extension CGRect {
     var bottomCenter: CGPoint {
         return CGPoint(x: self.midX, y: self.maxY)
     }
+    
+    func inset(for view: UIView) -> CGRect {
+        let frame = view.frame
+        let inset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: frame.width)
+        
+        return self.inset(by: inset)
+    }
 }

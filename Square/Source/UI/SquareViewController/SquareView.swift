@@ -10,30 +10,34 @@ import UIKit
 
 class SquareView: UIView {
 
-    @IBOutlet var label: UILabel?
-    
-    @IBOutlet var button: UIButton?
-    
-    var isAnimated: Bool {
-        return self.token?.isRunning ?? false
+    struct Strings {
+        
+        static let stop = "Stop"
+        static let start = "Start"
     }
     
-    var isStopped = true {
+    @IBOutlet var label: UILabel?
+    @IBOutlet var button: UIButton?
+    
+    private(set) var isStopped = true {
         didSet {
-            let newTitle = oldValue ? "Stop" : "Start"
+            let newTitle = oldValue ? Strings.stop : Strings.start
             self.button?.setTitle(newTitle, for: .normal)
         }
     }
     
-    private var token: Token?
+    private(set) var isAnimated = false
+    
     private var squarePosition = Position.topLeft
+
+    private let positions = CyclicSequence(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
     
-    private let screenBounds = UIScreen.main.bounds
-    private let offsetX: CGFloat = 20
-    private let offsetY: CGFloat = 44
-    
-    func autoMoveSquare() {
+    func startAutoMoving() {
+        if self.isStopped && !self.isAnimated {
+            self.autoMoveSquare()
+        }
         
+        self.isStopped.toggle()
     }
     
     func setSquarePosition(
@@ -41,17 +45,37 @@ class SquareView: UIView {
         animated: Bool = true,
         completionHandler: F.Completion<Bool>? = nil
     ) {
-        self.token = UIView.animationToken(
+        self.isAnimated = true
+        UIView.animate(
             withDuration: animated ? 1.0 : 0,
             animations: { self.label?.frame.origin = self.point(by: position) },
             completion: {
+                self.isAnimated = false
                 self.squarePosition = position
                 completionHandler?($0)
             }
         )
     }
     
+    private func autoMoveSquare() {
+        self.setSquarePosition(self.positions.next()) {_ in
+            if !self.isStopped {
+                self.autoMoveSquare()
+            }
+        }
+    }
+    
     private func point(by position: Position) -> CGPoint {
-        return CGPoint(x: 0, y: 0)
+        var path = self.frame.inset(by: self.safeAreaInsets)
+        self.label.do {
+            path = path.inset(for: $0)
+        }
+        
+        switch self.squarePosition {
+        case .topLeft: return path.topLeft
+        case .topRight: return path.topRight
+        case .bottomRight: return path.bottomRight
+        case .bottomLeft: return path.bottomLeft
+        }
     }
 }

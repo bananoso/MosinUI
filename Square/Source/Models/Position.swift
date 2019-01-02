@@ -10,7 +10,7 @@ import UIKit
 
 enum Position {
     case topLeft
-    case topEight
+    case topRight
     case bottomRight
     case bottomLeft
 }
