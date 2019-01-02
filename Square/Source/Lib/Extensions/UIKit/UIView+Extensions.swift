@@ -11,7 +11,6 @@ import UIKit
 extension UIView {
     
     class Token {
-        
         fileprivate(set) var isRunning = true
     }
     
