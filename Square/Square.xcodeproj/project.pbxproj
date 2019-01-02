@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */; };
 		3F512B3F21D368C800C14E8F /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512B3E21D368C800C14E8F /* F.swift */; };
 		3F513CED21D374F300C14E8F /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */; };
 		3F5D4FC721D60946003C4326 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FBC21D60945003C4326 /* Weak.swift */; };
@@ -29,6 +28,7 @@
 		3F5D4FE221D60BF2003C4326 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FE021D60BF2003C4326 /* Cancellable.swift */; };
 		3F5D4FE421D61BD2003C4326 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FE321D61BD2003C4326 /* CGRect+Extensions.swift */; };
 		3F5D4FE621D62136003C4326 /* RootViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D4FE521D62136003C4326 /* RootViewRepresentable.swift */; };
+		3F6D269521DCD1650040210A /* CyclicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D269421DCD1650040210A /* CyclicSequence.swift */; };
 		3FD3152621D2736B00143981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3152521D2736B00143981 /* AppDelegate.swift */; };
 		3FD3152D21D2736C00143981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152C21D2736C00143981 /* Assets.xcassets */; };
 		3FD3153021D2736C00143981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3152E21D2736C00143981 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		3F512B3E21D368C800C14E8F /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		3F513CEC21D374F300C14E8F /* Optional+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		3F5D4FBC21D60945003C4326 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		3F5D4FE021D60BF2003C4326 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		3F5D4FE321D61BD2003C4326 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		3F5D4FE521D62136003C4326 /* RootViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewRepresentable.swift; sourceTree = "<group>"; };
+		3F6D269421DCD1650040210A /* CyclicSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclicSequence.swift; sourceTree = "<group>"; };
 		3FD3152221D2736B00143981 /* Square.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3152521D2736B00143981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD3152C21D2736C00143981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +90,7 @@
 				3F5D4FC621D60946003C4326 /* Atomic.swift */,
 				3F5D4FBD21D60946003C4326 /* Queue.swift */,
 				3F5D4FBC21D60945003C4326 /* Weak.swift */,
+				3F6D269421DCD1650040210A /* CyclicSequence.swift */,
 				3F5D4FC221D60946003C4326 /* CancellableProperty */,
 				3F5D4FBE21D60946003C4326 /* ObservableObject */,
 			);
@@ -169,7 +170,6 @@
 		3F5D4FD121D609BC003C4326 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				3F512B3B21D3685900C14E8F /* UIView+Extensions.swift */,
 				3F5D4FE321D61BD2003C4326 /* CGRect+Extensions.swift */,
 			);
 			path = UIKit;
@@ -309,11 +309,11 @@
 				3F5D4FC921D60946003C4326 /* ObservableObject.Observers.swift in Sources */,
 				3F5D4FE121D60BF2003C4326 /* Weakifiable.swift in Sources */,
 				3F5D4FDA21D60A54003C4326 /* DispatchTime+Extensions.swift in Sources */,
-				3F512B3C21D3685900C14E8F /* UIView+Extensions.swift in Sources */,
 				3F5D4FCC21D60946003C4326 /* CancellableProperty.swift in Sources */,
 				3F5D4FCD21D60946003C4326 /* CompositCancellableProperty.swift in Sources */,
 				3F5D4FC721D60946003C4326 /* Weak.swift in Sources */,
 				3F5D4FDD21D60A54003C4326 /* RangeReplaceableCollection+Extension.swift in Sources */,
+				3F6D269521DCD1650040210A /* CyclicSequence.swift in Sources */,
 				3F5D4FE221D60BF2003C4326 /* Cancellable.swift in Sources */,
 				3F5D4FD821D60A54003C4326 /* Timer+Extensions.swift in Sources */,
 				3FD3154121D2782000143981 /* Position.swift in Sources */,
