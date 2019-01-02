@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  RootViewRepresentable.swift
 //  Square
 //
 //  Created by Mosin Dmitry on 28.12.2018.
@@ -12,7 +12,7 @@ protocol RootViewRepresentable {
     
     associatedtype RootView: UIView
     
-    var rootView: RootView { get }
+    var rootView: RootView? { get }
 }
 
 extension RootViewRepresentable where Self: UIViewController {

@@ -8,29 +8,21 @@
 
 import UIKit
 
-class SquareViewController: UIViewController {
-
-    var squareView: SquareView? {
-        if self.isViewLoaded {
-            return self.view as? SquareView
-        }
-
-        return nil
-    }
+class SquareViewController: UIViewController, RootViewRepresentable {
     
+    typealias RootView = SquareView
+        
     @IBAction func onStartButton(_ sender: UIButton) {
-        self.squareView.do {
+        self.rootView.do {
             if $0.isStopped && !$0.isAnimated {
                 $0.autoMoveSquare()
             }
-            
+
             $0.isStopped.toggle()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.squareView?.squarePosition = Position.leftTop
     }
 }
