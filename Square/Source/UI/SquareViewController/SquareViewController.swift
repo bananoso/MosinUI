@@ -13,7 +13,7 @@ class SquareViewController: UIViewController, RootViewRepresentable {
     typealias RootView = SquareView
         
     @IBAction func onStartButton(_ sender: UIButton) {
-        self.rootView?.startAutoMoving()
+        self.rootView?.startAutoMove()
     }
     
     override func viewDidLoad() {

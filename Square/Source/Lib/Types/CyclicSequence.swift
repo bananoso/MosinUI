@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CyclicSequence<Value> {
+final class CyclicSequence<Value> {
     
     private let atomicIndex = Atomic(0)
     private let values: [Value]

@@ -35,7 +35,6 @@
 		3FD3153921D273C700143981 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3153721D273C700143981 /* SquareViewController.swift */; };
 		3FD3153A21D273C700143981 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3153821D273C700143981 /* SquareViewController.xib */; };
 		3FD3153C21D273E300143981 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3153B21D273E300143981 /* SquareView.swift */; };
-		3FD3154121D2782000143981 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3154021D2782000143981 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +68,6 @@
 		3FD3153721D273C700143981 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3FD3153821D273C700143981 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3FD3153B21D273E300143981 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		3FD3154021D2782000143981 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 		3F513CF321D3BE2B00C14E8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3FD3154021D2782000143981 /* Position.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +123,7 @@
 		3F5D4FBB21D60733003C4326 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3F66838D21DDFF13008CCBBB /* Mixin */,
 				3F5D4FDE21D60B78003C4326 /* Protocols */,
 				3F512B3D21D368BC00C14E8F /* Types */,
 				3FD3153D21D2751A00143981 /* Extensions */,
@@ -180,9 +178,16 @@
 			children = (
 				3F5D4FE021D60BF2003C4326 /* Cancellable.swift */,
 				3F5D4FDF21D60BF2003C4326 /* Weakifiable.swift */,
-				3F5D4FE521D62136003C4326 /* RootViewRepresentable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F66838D21DDFF13008CCBBB /* Mixin */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4FE521D62136003C4326 /* RootViewRepresentable.swift */,
+			);
+			path = Mixin;
 			sourceTree = "<group>";
 		};
 		3FD3151921D2736B00143981 = {
@@ -316,7 +321,6 @@
 				3F6D269521DCD1650040210A /* CyclicSequence.swift in Sources */,
 				3F5D4FE221D60BF2003C4326 /* Cancellable.swift in Sources */,
 				3F5D4FD821D60A54003C4326 /* Timer+Extensions.swift in Sources */,
-				3FD3154121D2782000143981 /* Position.swift in Sources */,
 				3F5D4FC821D60946003C4326 /* Queue.swift in Sources */,
 				3F5D4FE621D62136003C4326 /* RootViewRepresentable.swift in Sources */,
 				3F5D4FD921D60A54003C4326 /* Strideable+Extensions.swift in Sources */,

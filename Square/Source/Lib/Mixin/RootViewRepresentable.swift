@@ -11,8 +11,6 @@ import UIKit
 protocol RootViewRepresentable {
     
     associatedtype RootView: UIView
-    
-    var rootView: RootView? { get }
 }
 
 extension RootViewRepresentable where Self: UIViewController {

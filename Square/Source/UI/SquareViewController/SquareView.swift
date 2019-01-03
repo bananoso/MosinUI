@@ -10,15 +10,17 @@ import UIKit
 
 class SquareView: UIView {
 
-    struct Strings {
+    @IBOutlet var label: UILabel?
+    @IBOutlet var button: UIButton?
+    
+    typealias Position = CGRect.Position
+    
+    private struct Strings {
         
         static let stop = "Stop"
         static let start = "Start"
     }
-    
-    @IBOutlet var label: UILabel?
-    @IBOutlet var button: UIButton?
-    
+
     private(set) var isStopped = true {
         didSet {
             let newTitle = oldValue ? Strings.stop : Strings.start
@@ -32,7 +34,7 @@ class SquareView: UIView {
 
     private let positions = CyclicSequence(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
     
-    func startAutoMoving() {
+    func startAutoMove() {
         if self.isStopped && !self.isAnimated {
             self.autoMoveSquare()
         }
@@ -66,10 +68,9 @@ class SquareView: UIView {
     }
     
     private func point(by position: Position) -> CGPoint {
-        var path = self.frame.inset(by: self.safeAreaInsets)
-        self.label.do {
-            path = path.inset(for: $0)
-        }
+        let path = self.bounds
+            .inset(by: self.safeAreaInsets)
+            .cutted(by: self.label)
         
         switch self.squarePosition {
         case .topLeft: return path.topLeft

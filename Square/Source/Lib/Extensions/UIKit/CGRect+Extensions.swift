@@ -10,6 +10,13 @@ import UIKit
 
 extension CGRect {
     
+    enum Position {
+        case topLeft
+        case topRight
+        case bottomRight
+        case bottomLeft
+    }
+    
     var topLeft: CGPoint {
         return CGPoint(x: self.minX, y: self.minY)
     }
@@ -46,10 +53,12 @@ extension CGRect {
         return CGPoint(x: self.midX, y: self.maxY)
     }
     
-    func inset(for view: UIView) -> CGRect {
-        let frame = view.frame
-        let inset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: frame.width)
-        
-        return self.inset(by: inset)
+    func cutted(by view: UIView?) -> CGRect {
+        return (view?.bounds).map {
+            let inset = UIEdgeInsets(top: 0, left: 0, bottom: $0.height, right: $0.width)
+            
+            return self.inset(by: inset)
+        }
+        ?? self
     }
 }
