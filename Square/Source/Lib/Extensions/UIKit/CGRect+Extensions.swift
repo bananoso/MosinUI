@@ -53,11 +53,15 @@ extension CGRect {
         return CGPoint(x: self.midX, y: self.maxY)
     }
     
+    func cutted(bottom: CGFloat, right: CGFloat) -> CGRect {
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: right)
+        
+        return self.inset(by: insets)
+    }
+    
     func cutted(by view: UIView?) -> CGRect {
         return (view?.bounds).map {
-            let inset = UIEdgeInsets(top: 0, left: 0, bottom: $0.height, right: $0.width)
-            
-            return self.inset(by: inset)
+            self.cutted(bottom: $0.height, right: $0.width)
         }
         ?? self
     }
