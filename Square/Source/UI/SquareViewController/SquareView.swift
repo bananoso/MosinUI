@@ -28,18 +28,30 @@ class SquareView: UIView {
         }
     }
     
-    private(set) var isAnimated = false
+    private(set) var isAnimating = false
     
     private var squarePosition = Position.topLeft
 
     private let positions = CyclicSequence(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
     
+    func toggleAutoMove() {
+        if self.isStopped {
+            self.startAutoMove()
+        } else {
+            self.stopAutoMove()
+        }
+    }
+    
     func startAutoMove() {
-        if self.isStopped && !self.isAnimated {
+        self.isStopped = false
+        
+        if !self.isAnimating {
             self.autoMoveSquare()
         }
-        
-        self.isStopped.toggle()
+    }
+    
+    func stopAutoMove() {
+        self.isStopped = true
     }
     
     func setSquarePosition(
@@ -47,12 +59,12 @@ class SquareView: UIView {
         animated: Bool = true,
         completionHandler: F.Completion<Bool>? = nil
     ) {
-        self.isAnimated = true
+        self.isAnimating = true
         UIView.animate(
             withDuration: animated ? 1.0 : 0,
             animations: { self.label?.frame.origin = self.point(at: position) },
             completion: {
-                self.isAnimated = false
+                self.isAnimating = false
                 self.squarePosition = position
                 completionHandler?($0)
             }
