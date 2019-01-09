@@ -68,9 +68,14 @@ class SquareView: UIView {
     }
     
     private func point(at position: Position) -> CGPoint {
+        let labelInsets = self.label.map {
+            UIEdgeInsets(top: 0, left: 0, bottom: $0.height, right: $0.width)
+        }
+        ?? .zero
+        
         return self.bounds
             .inset(by: self.safeAreaInsets)
-            .cutted(by: self.label)
+            .inset(by: labelInsets)
             .point(at: position)
     }
 }
