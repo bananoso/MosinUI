@@ -11,7 +11,7 @@ import Foundation
 extension Strideable where Self.Stride: SignedInteger, Self: ExpressibleByIntegerLiteral {
     
     func times(_ execute: () -> ()) {
-        (0..<self).forEach {_ in
+        (0..<self).forEach { _ in
             execute()
         }
     }

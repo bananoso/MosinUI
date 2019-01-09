@@ -50,7 +50,7 @@ class SquareView: UIView {
         self.isAnimated = true
         UIView.animate(
             withDuration: animated ? 1.0 : 0,
-            animations: { self.label?.frame.origin = self.point(by: position) },
+            animations: { self.label?.frame.origin = self.point(at: position) },
             completion: {
                 self.isAnimated = false
                 self.squarePosition = position
@@ -67,16 +67,10 @@ class SquareView: UIView {
         }
     }
     
-    private func point(by position: Position) -> CGPoint {
-        let path = self.bounds
+    private func point(at position: Position) -> CGPoint {
+        return self.bounds
             .inset(by: self.safeAreaInsets)
             .cutted(by: self.label)
-        
-        switch self.squarePosition {
-        case .topLeft: return path.topLeft
-        case .topRight: return path.topRight
-        case .bottomRight: return path.bottomRight
-        case .bottomLeft: return path.bottomLeft
-        }
+            .point(at: position)
     }
 }

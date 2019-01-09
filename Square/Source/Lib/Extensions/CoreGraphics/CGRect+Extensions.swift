@@ -6,7 +6,7 @@
 //  Copyright © 2018 IDAP. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 extension CGRect {
     
@@ -15,6 +15,11 @@ extension CGRect {
         case topRight
         case bottomRight
         case bottomLeft
+        case leftCenter
+        case rightCenter
+        case center
+        case topCenter
+        case bottomCenter
     }
     
     var topLeft: CGPoint {
@@ -53,16 +58,17 @@ extension CGRect {
         return CGPoint(x: self.midX, y: self.maxY)
     }
     
-    func cutted(bottom: CGFloat, right: CGFloat) -> CGRect {
-        let insets = UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: right)
-        
-        return self.inset(by: insets)
-    }
-    
-    func cutted(by view: UIView?) -> CGRect {
-        return (view?.bounds).map {
-            self.cutted(bottom: $0.height, right: $0.width)
+    func point(at position: Position) -> CGPoint {
+        switch position {
+        case .topLeft: return self.topLeft
+        case .topRight: return self.topRight
+        case .bottomRight: return self.bottomRight
+        case .bottomLeft: return self.bottomLeft
+        case .leftCenter: return self.leftCenter
+        case .rightCenter: return self.rightCenter
+        case .center: return self.center
+        case .topCenter: return self.topCenter
+        case .bottomCenter: return self.bottomCenter
         }
-        ?? self
     }
 }
