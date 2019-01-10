@@ -13,19 +13,19 @@ final class CyclicSequence<Value> {
     private let atomicIndex = Atomic(0)
     private let values: [Value]
     
-    var count: Int {
+    public var count: Int {
         return self.values.count
     }
     
-    init(_ values: [Value]) {
+    public init(_ values: [Value]) {
         self.values = values
     }
     
-    convenience init(_ values: Value...) {
+    public convenience init(_ values: Value...) {
         self.init(values)
     }
         
-    func next() -> Value {
+    public func next() -> Value {
         return self.atomicIndex.modify {
             $0 = ($0 + 1) % self.count
             

@@ -10,7 +10,7 @@ import Foundation
 
 extension DispatchQueue {
     
-    static var background: DispatchQueue {
+    public static var background: DispatchQueue {
         return .global(qos: .background)
     }
 }

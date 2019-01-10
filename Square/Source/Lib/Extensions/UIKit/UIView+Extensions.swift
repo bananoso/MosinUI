@@ -10,11 +10,11 @@ import UIKit
 
 extension UIView {
     
-    var height: CGFloat {
+    public var height: CGFloat {
         return self.bounds.height
     }
     
-    var width: CGFloat {
+    public var width: CGFloat {
         return self.bounds.width
     }
 }

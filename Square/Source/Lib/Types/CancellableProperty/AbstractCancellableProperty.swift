@@ -17,7 +17,7 @@ class AbstractCancellableProperty<Storage> {
     
     private let atomicCancellable: Atomic<Storage>
     
-    init(initial: Storage, dispose: @escaping (Storage) -> ()) {
+    public init(initial: Storage, dispose: @escaping (Storage) -> ()) {
         self.atomicCancellable = Atomic(initial, lock: .init()) {
             dispose($0.old)
         }

@@ -115,13 +115,6 @@
 			path = SquareViewController;
 			sourceTree = "<group>";
 		};
-		3F513CF321D3BE2B00C14E8F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		3F513CF421D3BE4A00C14E8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +212,6 @@
 		3FD3152421D2736B00143981 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3F513CF321D3BE2B00C14E8F /* Models */,
 				3F513CF421D3BE4A00C14E8F /* UI */,
 				3F5D4FBB21D60733003C4326 /* Lib */,
 				3FD3152521D2736B00143981 /* AppDelegate.swift */,

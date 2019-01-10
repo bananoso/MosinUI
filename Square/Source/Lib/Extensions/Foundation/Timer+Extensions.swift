@@ -10,7 +10,7 @@ import Foundation
 
 extension Timer {
     
-    static func scheduledWeakTimer(
+    public static func scheduledWeakTimer(
         interval: TimeInterval,
         repeats: Bool,
         handler: @escaping () -> ()
@@ -33,7 +33,7 @@ fileprivate class TimerWeakHandler {
     
     private var handler: () -> ()
     
-    init(handler: @escaping () -> ()) {
+    public init(handler: @escaping () -> ()) {
         self.handler = handler
     }
     

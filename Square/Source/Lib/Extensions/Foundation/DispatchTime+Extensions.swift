@@ -10,7 +10,7 @@ import Foundation
 
 extension DispatchTime {
     
-    static func after(interval: TimeInterval) -> DispatchTime {
+    public static func after(interval: TimeInterval) -> DispatchTime {
         return .now() + interval
     }
 }

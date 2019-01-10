@@ -10,12 +10,12 @@ import Foundation
 
 extension Optional {
     
-    func `do`(_ execute: (Wrapped) -> ()) {
+    public func `do`(_ execute: (Wrapped) -> ()) {
         self.map(execute)
     }
     
     @discardableResult
-    func ifNil(_ execute: () -> ()) -> Optional {
+    public func ifNil(_ execute: () -> ()) -> Optional {
         if self == nil {
             execute()
         }
@@ -23,7 +23,7 @@ extension Optional {
         return self
     }
     
-    func apply<Result>(_ transform: ((Wrapped) -> Result)?) -> Result? {
+    public func apply<Result>(_ transform: ((Wrapped) -> Result)?) -> Result? {
         return self.flatMap { transform?($0) }
     }
 }

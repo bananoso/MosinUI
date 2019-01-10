@@ -10,7 +10,7 @@ import Foundation
 
 extension RangeReplaceableCollection {
     
-    mutating func safeRemoveFirst() -> Element? {
+    public mutating func safeRemoveFirst() -> Element? {
         return unless(self.isEmpty) { self.removeFirst() }
     }
 }

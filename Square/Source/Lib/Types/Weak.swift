@@ -12,7 +12,7 @@ struct Weak<Wrapped: AnyObject> {
     
     private(set) weak var value: Wrapped?
     
-    init(_ value: Wrapped) {
+    public init(_ value: Wrapped) {
         self.value = value
     }
     

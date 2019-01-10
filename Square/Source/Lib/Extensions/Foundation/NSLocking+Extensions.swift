@@ -10,7 +10,7 @@ import Foundation
 
 extension NSLocking {
     
-    func locked<Result>(_ action: () -> Result) -> Result {
+    public func locked<Result>(_ action: () -> Result) -> Result {
         self.lock()
         defer { self.unlock() }
         

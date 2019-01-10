@@ -10,7 +10,7 @@ import Foundation
 
 class CancellableProperty: AbstractCancellableProperty<Cancellable?> {
     
-    init() {
+    public init() {
         super.init(initial: nil) { $0?.cancel() }
     }
 }

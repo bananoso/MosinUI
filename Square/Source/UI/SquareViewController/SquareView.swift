@@ -13,7 +13,7 @@ class SquareView: UIView {
     @IBOutlet var label: UILabel?
     @IBOutlet var button: UIButton?
     
-    typealias Position = CGRect.Position
+    public typealias Position = CGRect.Position
     
     private struct Strings {
         
@@ -34,7 +34,7 @@ class SquareView: UIView {
 
     private let positions = CyclicSequence(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
     
-    func toggleAutoMove() {
+    public func toggleAutoMove() {
         if self.isStopped {
             self.startAutoMove()
         } else {
@@ -42,7 +42,7 @@ class SquareView: UIView {
         }
     }
     
-    func startAutoMove() {
+    public func startAutoMove() {
         self.isStopped = false
         
         if !self.isAnimating {
@@ -50,11 +50,11 @@ class SquareView: UIView {
         }
     }
     
-    func stopAutoMove() {
+    public func stopAutoMove() {
         self.isStopped = true
     }
     
-    func setSquarePosition(
+    public func setSquarePosition(
         _ position: Position,
         animated: Bool = true,
         completionHandler: F.Completion<Bool>? = nil
@@ -72,7 +72,7 @@ class SquareView: UIView {
     }
     
     private func autoMoveSquare() {
-        self.setSquarePosition(self.positions.next()) {_ in
+        self.setSquarePosition(self.positions.next()) { _ in
             if !self.isStopped {
                 self.autoMoveSquare()
             }

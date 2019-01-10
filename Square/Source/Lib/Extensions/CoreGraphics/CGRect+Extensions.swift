@@ -10,7 +10,7 @@ import CoreGraphics
 
 extension CGRect {
     
-    enum Position {
+    public enum Position {
         case topLeft
         case topRight
         case bottomRight
@@ -22,43 +22,43 @@ extension CGRect {
         case bottomCenter
     }
     
-    var topLeft: CGPoint {
+    public var topLeft: CGPoint {
         return CGPoint(x: self.minX, y: self.minY)
     }
     
-    var topRight: CGPoint {
+    public var topRight: CGPoint {
         return CGPoint(x: self.maxX, y: self.minY)
     }
     
-    var bottomRight: CGPoint {
+    public var bottomRight: CGPoint {
         return CGPoint(x: self.maxX, y: self.maxY)
     }
     
-    var bottomLeft: CGPoint {
+    public var bottomLeft: CGPoint {
         return CGPoint(x: self.minX, y: self.maxY)
     }
     
-    var leftCenter: CGPoint {
+    public var leftCenter: CGPoint {
         return CGPoint(x: self.minX, y: self.midY)
     }
     
-    var rightCenter: CGPoint {
+    public var rightCenter: CGPoint {
         return CGPoint(x: self.maxX, y: self.midY)
     }
     
-    var center: CGPoint {
+    public var center: CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
     }
     
-    var topCenter: CGPoint {
+    public var topCenter: CGPoint {
         return CGPoint(x: self.midX, y: self.minY)
     }
     
-    var bottomCenter: CGPoint {
+    public var bottomCenter: CGPoint {
         return CGPoint(x: self.midX, y: self.maxY)
     }
     
-    func point(at position: Position) -> CGPoint {
+    public func point(at position: Position) -> CGPoint {
         switch position {
         case .topLeft: return self.topLeft
         case .topRight: return self.topRight

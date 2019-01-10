@@ -10,7 +10,7 @@ import Foundation
 
 class CompositCancellableProperty: AbstractCancellableProperty<[Cancellable]> {
     
-    init() {
+    public init() {
         super.init(initial: []) {
             $0.forEach { $0.cancel() }
         }

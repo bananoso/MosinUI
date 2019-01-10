@@ -12,25 +12,25 @@ class Queue<Element> {
     
     private let elements: Atomic<[Element]>
     
-    init(_ elements: [Element] = []) {
+    public init(_ elements: [Element] = []) {
         self.elements = Atomic(elements)
     }
     
-    var count: Int {
+    public var count: Int {
         return self.elements.value.count
     }
     
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return self.elements.value.isEmpty
     }
     
-    func dequeue() -> Element? {
+    public func dequeue() -> Element? {
         return self.elements.modify {
             $0.safeRemoveFirst()
         }
     }
 
-    func enqueue(_ value: Element) {
+    public func enqueue(_ value: Element) {
         self.elements.modify {
             $0.append(value)
         }

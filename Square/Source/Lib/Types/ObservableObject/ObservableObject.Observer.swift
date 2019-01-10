@@ -25,9 +25,9 @@ extension ObservableObject {
         }
         
         weak private(set) var sender: AnyObject?
-        let handler: Handler
+        public let handler: Handler
         
-        init(sender: AnyObject, handler: @escaping Handler) {
+        public init(sender: AnyObject, handler: @escaping Handler) {
             self.sender = sender
             self.handler = handler
         }
